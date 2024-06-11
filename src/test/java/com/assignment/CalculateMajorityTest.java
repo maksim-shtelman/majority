@@ -13,18 +13,18 @@ public class CalculateMajorityTest {
 
     @Test
     public void testFindMajorityElementWithMajority() throws Exception{
-        CalculateMajority me = new CalculateMajority();
+        CalculateMajority calculateMajority = new CalculateMajority();
         ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1,1,2,1,3));
 
-        assertEquals((Integer) 1, me.findMajorityElement(nums));
+        assertEquals((Integer) 1, calculateMajority.findMajorityElement(nums));
     }
 
     @Test
     public void testFindMajorityElementWithoutMajority() {
-        CalculateMajority me = new CalculateMajority();
+        CalculateMajority calculateMajority = new CalculateMajority();
         ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1,1,2,2));
         try {
-            me.findMajorityElement(nums);
+            calculateMajority.findMajorityElement(nums);
             fail("Expected NoMajorityException");
         } catch (NoMajorityException e) {
             // success
@@ -35,10 +35,10 @@ public class CalculateMajorityTest {
 
     @Test
     public void testFindMajorityElementWithEmptyList() {
-        CalculateMajority me = new CalculateMajority();
+        CalculateMajority calculateMajority = new CalculateMajority();
         ArrayList<Integer> nums = new ArrayList<>();
         try {
-            me.findMajorityElement(nums);
+            calculateMajority.findMajorityElement(nums);
             fail("Expected EmptyListException to be thrown");
         } catch (EmptyListException e) {
             // success
