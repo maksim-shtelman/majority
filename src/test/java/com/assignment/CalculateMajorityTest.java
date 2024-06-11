@@ -20,6 +20,14 @@ public class CalculateMajorityTest {
     }
 
     @Test
+    public void testFindMajorityElemenWithSingleElement() throws Exception{
+        CalculateMajority calculateMajority = new CalculateMajority();
+        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1));
+
+        assertEquals((Integer) 1, calculateMajority.findMajorityElement(nums));
+    }
+
+    @Test
     public void testFindMajorityElementWithoutMajority() {
         CalculateMajority calculateMajority = new CalculateMajority();
         ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1,1,2,2));
